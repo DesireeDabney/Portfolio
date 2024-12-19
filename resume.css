@@ -1,0 +1,161 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 80%;
+    margin: auto;
+    box-shadow: 1px 2px 15px rgb(183, 183, 183);
+    grid-template-areas: 
+    'header header header header'
+    'left right right right'
+    'left right right right';
+}
+
+header{
+    display: flex;
+    height: 15em;
+    grid-area: header;
+    background-color: #566a68;
+}
+
+.flex-container{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    width: 15em;
+}
+
+.flex-container p{
+    background-color:rgb(248, 255, 236);
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0;
+   /* justify-content: space-around; */
+}
+
+.left {
+    color: #485655;
+    background-color: #bbddc1;
+    padding: 25px;
+    grid-area: left;
+}
+
+
+.web{
+    text-align: center;
+}
+
+.right{
+    padding-left: 3em;
+    background-color: rgb(248, 255, 236);
+    padding-right: 1em;
+    line-height: 25px;
+    grid-area: right;
+}
+
+
+ul{
+    list-style-type: none;
+    padding-left: 0 ;
+}
+
+.right h2{
+    color: #485655;
+}
+
+.right hr{
+   border: 1px solid #485655;
+}
+
+hr{
+    
+    height: 2px;
+    background-color: #485655;
+    border: none;
+  }
+
+.right h4{
+    color: #485655;
+}
+
+
+i{
+    color: grey;
+}
+
+body{
+    background-color: rgb(236, 236, 236);
+    padding: 5em;
+}
+
+img{
+    height: 12em;
+    display: block;
+  margin-right: auto;
+  margin-left: 3em;
+  margin-top: 2em;
+}
+
+header .name{
+    margin-right: 2em;
+    margin-top: 2em;
+    color: rgb(248, 255, 236);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.nav {
+    margin: 0;
+    display: flex;
+    background-color: #566a68;
+    width: 100%;
+  }
+
+  .nav,
+  ul li a {
+    text-decoration: underline;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+
+  a:link,
+      a:visited {
+        color: #75bcaf;
+      }
+
+      a:hover {
+        color: #abd7b2;
+      }
+
+@media (max-width:767px){
+    .container{
+    grid-template-columns: 1fr;
+    width: 100%;
+    grid-template-areas: 
+    "header"
+    "left"
+    "right";
+    /*grid-template-areas: 
+    'header'
+    'left right right right'
+    'left right right right';*/
+    }
+    header{
+        flex-direction: column;
+        height: 100%;
+       
+    }
+
+    .name{
+        margin: 2em;
+    }
+    
+    .right{
+        padding-left: 1em;
+    }
+} 
